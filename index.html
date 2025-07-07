@@ -209,26 +209,257 @@ class="w-full rounded-lg mb-4">
 </div>
 </div>
 </section>
-<!-- Slider de Feedbacks de Clientes com Avatares e Estrelas com Carrossel Funcional -->
+<!-- Prova Social -->
 <section class="px-4 py-6">
   <h2 class="text-2xl font-bold text-center mb-6">O Que Dizem Nossos Clientes</h2>
 
-  <div class="relative w-full overflow-hidden">
-    <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out w-full scroll-smooth space-x-4 hide-scrollbar">
-      <!-- Slides serão renderizados aqui -->
+  <div class="relative overflow-hidden w-full">
+    <div id="testimonials-carousel" class="flex flex-nowrap transition-transform duration-300 ease-in-out">
+      <!-- Slide 1 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20man%2C%20casual%20attire%2C%20natural%20lighting%2C%20neutral%20background%2C%20friendly%20smile%2C%20outdoor%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=6&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Ricardo Mendes</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Incrível! Em apenas 2 semanas usando o sistema HHO, a economia de combustível é surpreendente. Meu caminhão está consumindo 45% menos diesel. O investimento se pagou em menos de um mês!"</p>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20woman%2C%20business%20attire%2C%20natural%20lighting%2C%20office%20background%2C%20confident%20smile%2C%20indoor%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=7&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Fernanda Santos</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Sou proprietária de uma frota de vans e implementei o sistema HHO em todos os veículos. A economia mensal é impressionante, reduziu os custos em mais de 50%. Recomendo fortemente!"</p>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20man%2C%20work%20uniform%2C%20natural%20lighting%2C%20garage%20background%2C%20serious%20expression%2C%20indoor%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=8&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">José Pereira</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Como mecânico profissional, sempre fui cético com sistemas de economia. Mas o HHO realmente funciona! Testei em diversos veículos e os resultados são consistentes. Economia real de 40-60%."</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20man%2C%20casual%20business%20attire%2C%20natural%20lighting%2C%20urban%20background%2C%20friendly%20smile%2C%20outdoor%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=9&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Gabriel Costa</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Trabalho com entregas e o combustível era meu maior gasto. Com o sistema HHO, reduzi o consumo em 55%. Além da economia, o carro ficou mais potente e responsivo. Melhor investimento que fiz!"</p>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20older%20Brazilian%20man%2C%20professional%20attire%2C%20natural%20lighting%2C%20office%20background%2C%20trustworthy%20expression%2C%20indoor%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=10&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Alberto Rodrigues</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Proprietário de empresa de transportes há 25 anos, nunca vi nada igual. Implementamos o HHO em toda a frota e a redução nos custos operacionais foi extraordinária. Sistema altamente recomendado!"</p>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20woman%2C%20casual%20business%20attire%2C%20natural%20lighting%2C%20neutral%20background%2C%20confident%20smile%2C%20indoor%20office%20setting%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=7&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Camila Ferreira</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Economizei quase metade do combustível em minha van com o sistema HHO. Fácil instalação e resultados rápidos. Estou muito satisfeita e recomendo para todos meus colegas motoristas."</p>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20man%2C%20casual%20attire%2C%20natural%20lighting%2C%20outdoor%20background%2C%20serene%20expression%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=11&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Marcos Lima</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Após instalar o sistema HHO, percebi que o motor funciona mais leve e com menos esforço. Isso se traduz em menos gastos com manutenção e mais economia. Excelente produto."</p>
+      </div>
+
+      <!-- Slide 8 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20man%2C%20work%20uniform%2C%20natural%20lighting%2C%20garage%20background%2C%20smiling%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=12&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Lucas Almeida</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Uso o sistema HHO em minha frota de veículos de entrega e o retorno tem sido fantástico. A economia é constante e a instalação é simples. Recomendo a todos os empresários do setor."</p>
+      </div>
+
+      <!-- Slide 9 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20older%20Brazilian%20woman%2C%20casual%20attire%2C%20natural%20lighting%2C%20outdoor%20background%2C%20friendly%20smile%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=13&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Helena Martins</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Depois que meu marido instalou o sistema HHO no carro da família, notamos uma economia real. Ele também ficou menos poluente e a direção mais suave. Produto confiável e eficiente."</p>
+      </div>
+
+      <!-- Slide 10 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20woman%2C%20casual%20attire%2C%20natural%20lighting%2C%20office%20background%2C%20friendly%20smile%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=14&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Patrícia Oliveira</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Gostei muito da economia obtida com o sistema HHO, o consumo do meu carro caiu consideravelmente. Fácil instalação e o atendimento da equipe foi excelente. Recomendo muito!"</p>
+      </div>
+
+      <!-- Slide 11 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20man%2C%20casual%20attire%2C%20natural%20lighting%2C%20garage%20background%2C%20serious%20expression%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=15&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Eduardo Silva</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Sistema HHO mudou o jogo para minha empresa de transportes. Economia consistente e manutenção reduzida nos veículos. Serviço confiável e instalação rápida."</p>
+      </div>
+
+      <!-- Slide 12 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20woman%2C%20business%20attire%2C%20natural%20lighting%2C%20office%20background%2C%20smiling%20expression%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=16&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Aline Souza</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"Recomendo o sistema HHO para qualquer pessoa que queira economizar no combustível. Fácil de usar e realmente eficaz. Meus clientes também notaram a diferença."</p>
+      </div>
+
+      <!-- Slide 13 -->
+      <div class="w-full flex-shrink-0 bg-white p-4 rounded-lg shadow-md">
+        <div class="flex items-center mb-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20older%20Brazilian%20man%2C%20casual%20attire%2C%20natural%20lighting%2C%20outdoor%20background%2C%20serious%20expression%2C%20realistic%20photo%2C%20front%20facing%2C%20shoulders%20up&width=48&height=48&seq=17&orientation=squarish"
+              alt="Cliente" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h4 class="font-bold">Carlos Menezes</h4>
+            <div class="flex text-yellow-400">
+              <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-700">"O sistema é robusto e funciona perfeitamente no meu caminhão. Reduzi o consumo de diesel e ainda ganhei em desempenho. Empresa séria e atendimento nota 10."</p>
+      </div>
     </div>
 
-    <!-- Botões de navegação -->
+    <!-- Navegação -->
     <div class="flex justify-center mt-4 space-x-2">
-      <button onclick="slideTestimonials(-1)" class="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-        </svg>
+      <button id="prev-testimonial" class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full">
+        <i class="ri-arrow-left-s-line"></i>
       </button>
-      <button onclick="slideTestimonials(1)" class="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-        </svg>
+      <div class="flex space-x-1">
+        <!-- Atualize estes indicadores dinamicamente se desejar -->
+        <span class="w-2 h-2 rounded-full bg-primary"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+      </div>
+      <button id="next-testimonial" class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full">
+        <i class="ri-arrow-right-s-line"></i>
       </button>
     </div>
   </div>
@@ -236,74 +467,15 @@ class="w-full rounded-lg mb-4">
   <!-- Rodapé -->
   <div class="flex justify-center mt-6">
     <div class="flex items-center bg-gray-100 px-4 py-2 rounded-lg">
-      <div class="w-6 h-6 flex items-center justify-center text-blue-600 mr-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.195a9 9 0 01-13.757 11.61z" />
-        </svg>
+      <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
+        <i class="ri-user-line"></i>
       </div>
       <span class="text-sm font-bold">+12.458 clientes satisfeitos</span>
     </div>
   </div>
 </section>
 
-<style>
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-</style>
 
-<script>
-  let currentPosition = 0;
-  const slideWidth = 296;
-  const track = document.getElementById("testimonial-track");
-
-  const feedbacks = [
-    { nome: "Marcos L.", img: "man1", nota: "★★★★★", texto: "Economizei mais de 30% no primeiro mês! Instalação simples e o sistema realmente funciona." },
-    { nome: "João V.", img: "man2", nota: "★★★★★", texto: "Não acreditei no começo, mas agora meu carro gasta muito menos. Valeu cada centavo!" },
-    { nome: "Eduardo B.", img: "man3", nota: "★★★★☆", texto: "Achei interessante e arrisquei. Instalei em casa e o resultado foi surpreendente." },
-    { nome: "Sérgio M.", img: "man4", nota: "★★★★★", texto: "Fiz o pagamento desconfiado, mas recebi tudo certinho. Recomendo demais!" },
-    { nome: "Carlos D.", img: "man5", nota: "★★★★★", texto: "Recebi o guia no mesmo dia, instalei e estou rodando tranquilo. Economia real!" },
-    { nome: "André P.", img: "man6", nota: "★★★★★", texto: "Nunca imaginei que água pudesse ajudar no consumo! Estou muito satisfeito." },
-    { nome: "Luciano M.", img: "man7", nota: "★★★★☆", texto: "Sou mecânico e instalei em 3 carros de clientes. Todos aprovaram!" },
-    { nome: "Fábio T.", img: "man8", nota: "★★★★★", texto: "Uso diariamente pra trabalhar. Já senti diferença no bolso." },
-    { nome: "Roberto C.", img: "man9", nota: "★★★★★", texto: "Simples, funcional e acessível. Recomendo a todos que querem economizar." },
-    { nome: "Daniel A.", img: "man10", nota: "★★★★☆", texto: "Achei que fosse golpe, mas instalei e tô economizando de verdade." },
-    { nome: "Leandro G.", img: "man11", nota: "★★★★★", texto: "Manual bem explicado. Instalei sozinho em uma tarde." },
-    { nome: "Vinícius S.", img: "man12", nota: "★★★★★", texto: "Minha esposa achou loucura, agora quer instalar no carro dela." },
-    { nome: "Fernando R.", img: "man13", nota: "★★★★★", texto: "Tecnologia simples e funcional. Vale cada centavo." }
-  ];
-
-  function renderSlides() {
-    track.innerHTML = feedbacks.map(f => `
-      <div class='min-w-[280px] bg-white p-4 rounded-xl shadow-md'>
-        <div class='flex items-center mb-2'>
-          <div class='w-12 h-12 rounded-full overflow-hidden mr-3'>
-            <img src='/avatars/${f.img}.jpg' alt='${f.nome}' class='w-full h-full object-cover'>
-          </div>
-          <div>
-            <p class='font-semibold text-gray-800'>${f.nome}</p>
-            <p class='text-sm text-yellow-500'>${f.nota}</p>
-          </div>
-        </div>
-        <p class='text-gray-700 text-sm'>“${f.texto}”</p>
-      </div>
-    `).join("");
-  }
-
-  function slideTestimonials(direction) {
-    currentPosition += direction * slideWidth;
-    if (currentPosition < 0) currentPosition = 0;
-    const maxScroll = track.scrollWidth - track.clientWidth;
-    if (currentPosition > maxScroll) currentPosition = maxScroll;
-    track.scrollTo({ left: currentPosition, behavior: 'smooth' });
-  }
-
-  renderSlides();
-</script>
 <!-- Problemas e Soluções -->
 <section class="px-4 py-6 bg-white">
 <h2 class="text-2xl font-bold text-center mb-6">Problemas que o HHO Resolve</h2>
