@@ -209,217 +209,60 @@ class="w-full rounded-lg mb-4">
 </div>
 </div>
 </section>
-<!-- Prova Social -->
+<!-- Slider de Feedbacks de Clientes com Avatares e Estrelas com Carrossel Funcional -->
 <section class="px-4 py-6">
   <h2 class="text-2xl font-bold text-center mb-6">O Que Dizem Nossos Clientes</h2>
 
-  <div class="relative overflow-hidden w-full">
-    <div id="testimonials-carousel" class="flex flex-nowrap transition-transform duration-300 ease-in-out">
-     <!-- Slide 1 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20middle-aged%20Brazilian%20man&width=48&height=48&seq=21&orientation=squarish" alt="Cliente 1" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Marcos L.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Economizei mais de 30% no primeiro mês! Instalação simples e o sistema realmente funciona.”</p>
-  </div>
+  <div class="relative w-full overflow-hidden">
+    <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out w-max space-x-4">
+      <!-- Slides 1 a 13 -->
+      <script>
+        const feedbacks = [
+          { nome: "Marcos L.", img: 12, nota: "★★★★★", texto: "Economizei mais de 30% no primeiro mês! Instalação simples e o sistema realmente funciona." },
+          { nome: "João V.", img: 15, nota: "★★★★★", texto: "Não acreditei no começo, mas agora meu carro gasta muito menos. Valeu cada centavo!" },
+          { nome: "Eduardo B.", img: 20, nota: "★★★★☆", texto: "Achei interessante e arrisquei. Instalei em casa e o resultado foi surpreendente." },
+          { nome: "Sérgio M.", img: 29, nota: "★★★★★", texto: "Fiz o pagamento desconfiado, mas recebi tudo certinho. Recomendo demais!" },
+          { nome: "Carlos D.", img: 33, nota: "★★★★★", texto: "Recebi o guia no mesmo dia, instalei e estou rodando tranquilo. Economia real!" },
+          { nome: "André P.", img: 36, nota: "★★★★★", texto: "Nunca imaginei que água pudesse ajudar no consumo! Estou muito satisfeito." },
+          { nome: "Luciano M.", img: 39, nota: "★★★★☆", texto: "Sou mecânico e instalei em 3 carros de clientes. Todos aprovaram!" },
+          { nome: "Fábio T.", img: 40, nota: "★★★★★", texto: "Uso diariamente pra trabalhar. Já senti diferença no bolso." },
+          { nome: "Roberto C.", img: 42, nota: "★★★★★", texto: "Simples, funcional e acessível. Recomendo a todos que querem economizar." },
+          { nome: "Daniel A.", img: 44, nota: "★★★★☆", texto: "Achei que fosse golpe, mas instalei e tô economizando de verdade." },
+          { nome: "Leandro G.", img: 46, nota: "★★★★★", texto: "Manual bem explicado. Instalei sozinho em uma tarde." },
+          { nome: "Vinícius S.", img: 47, nota: "★★★★★", texto: "Minha esposa achou loucura, agora quer instalar no carro dela." },
+          { nome: "Fernando R.", img: 48, nota: "★★★★★", texto: "Tecnologia simples e funcional. Vale cada centavo." }
+        ];
 
-  <!-- Slide 2 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20young%20Brazilian%20man%20smiling&width=48&height=48&seq=22&orientation=squarish" alt="Cliente 2" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">João V.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
+        document.write(
+          feedbacks.map(f => `
+            <div class='min-w-[280px] bg-white p-4 rounded-xl shadow-md'>
+              <div class='flex items-center mb-2'>
+                <div class='w-12 h-12 rounded-full overflow-hidden mr-3'>
+                  <img src='https://i.pravatar.cc/48?img=${f.img}' alt='${f.nome}' class='w-full h-full object-cover'>
+                </div>
+                <div>
+                  <p class='font-semibold text-gray-800'>${f.nome}</p>
+                  <p class='text-sm text-yellow-500'>${f.nota}</p>
+                </div>
+              </div>
+              <p class='text-gray-700 text-sm'>“${f.texto}”</p>
+            </div>
+          `).join("")
+        );
+      </script>
     </div>
-    <p class="text-gray-700 text-sm">“Não acreditei no começo, mas agora meu carro gasta muito menos. Valeu cada centavo!”</p>
-  </div>
 
-  <!-- Slide 3 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20light-skinned%20Brazilian%20man%20with%20blond%20hair&width=48&height=48&seq=23&orientation=squarish" alt="Cliente 3" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Eduardo B.</p>
-        <p class="text-sm text-gray-500">★★★★☆</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Achei interessante e arrisquei. Instalei em casa e o resultado foi surpreendente.”</p>
-  </div>
-
-  <!-- Slide 4 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20dark-skinned%20Brazilian%20man%2C%20natural%20light&width=48&height=48&seq=24&orientation=squarish" alt="Cliente 4" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Sérgio M.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Fiz o pagamento desconfiado, mas recebi tudo certinho. Recomendo demais!”</p>
-  </div>
-
-  <!-- Slide 5 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20auto%20enthusiast&width=48&height=48&seq=25&orientation=squarish" alt="Cliente 5" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Carlos D.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Recebi o guia no mesmo dia, instalei e estou rodando tranquilo. Economia real!”</p>
-  </div>
-
-  <!-- Slide 6 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20man%20with%20beard&width=48&height=48&seq=26&orientation=squarish" alt="Cliente 6" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Fábio T.</p>
-        <p class="text-sm text-gray-500">★★★★☆</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Fácil de seguir e instalar. Já recomendei para dois amigos.”</p>
-  </div>
-
-  <!-- Slide 7 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20young%20brazilian%20mechanic&width=48&height=48&seq=27&orientation=squarish" alt="Cliente 7" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Igor R.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Trabalho com mecânica e aprovei o sistema. É eficiente.”</p>
-  </div>
-
-  <!-- Slide 8 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20man%20wearing%20glasses&width=48&height=48&seq=28&orientation=squarish" alt="Cliente 8" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Leandro C.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Sistema honesto e funciona. Vale muito a pena.”</p>
-  </div>
-
-  <!-- Slide 9 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20driver%20man&width=48&height=48&seq=29&orientation=squarish" alt="Cliente 9" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Renato G.</p>
-        <p class="text-sm text-gray-500">★★★★☆</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Sou motorista de app e senti diferença no consumo logo na primeira semana.”</p>
-  </div>
-
-  <!-- Slide 10 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20man%20outdoors&width=48&height=48&seq=30&orientation=squarish" alt="Cliente 10" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Bruno A.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Minha esposa achou loucura, agora ela quer no carro dela também.”</p>
-  </div>
-
-  <!-- Slide 11 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20entrepreneur%20man&width=48&height=48&seq=31&orientation=squarish" alt="Cliente 11" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">André F.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Uso pra visitar clientes todo dia, me ajudou a reduzir os gastos.”</p>
-  </div>
-
-  <!-- Slide 12 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20young%20brazilian%20man%20front%20facing&width=48&height=48&seq=32&orientation=squarish" alt="Cliente 12" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Thiago P.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Manual bem explicado. Instalei sozinho em uma tarde.”</p>
-  </div>
-
-  <!-- Slide 13 -->
-  <div class="min-w-[280px] bg-white p-4 rounded-xl shadow-md">
-    <div class="flex items-center mb-2">
-      <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
-        <img src="https://readdy.ai/api/search-image?query=portrait%20of%20brazilian%20man%20in%20garage&width=48&height=48&seq=33&orientation=squarish" alt="Cliente 13" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <p class="font-semibold text-gray-800">Luciano E.</p>
-        <p class="text-sm text-gray-500">★★★★★</p>
-      </div>
-    </div>
-    <p class="text-gray-700 text-sm">“Tecnologia real e funcional. Já recuperei o valor investido!”</p>
-  </div>
-</div>
-    <!-- Navegação -->
+    <!-- Botões de navegação -->
     <div class="flex justify-center mt-4 space-x-2">
-      <button id="prev-testimonial" class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full">
-        <i class="ri-arrow-left-s-line"></i>
+      <button onclick="slideTestimonials(-1)" class="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
       </button>
-      <div class="flex space-x-1">
-        <!-- Atualize estes indicadores dinamicamente se desejar -->
-        <span class="w-2 h-2 rounded-full bg-primary"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-        <span class="w-2 h-2 rounded-full bg-gray-300"></span>
-      </div>
-      <button id="next-testimonial" class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full">
-        <i class="ri-arrow-right-s-line"></i>
+      <button onclick="slideTestimonials(1)" class="w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
       </button>
     </div>
   </div>
@@ -427,15 +270,30 @@ class="w-full rounded-lg mb-4">
   <!-- Rodapé -->
   <div class="flex justify-center mt-6">
     <div class="flex items-center bg-gray-100 px-4 py-2 rounded-lg">
-      <div class="w-6 h-6 flex items-center justify-center text-primary mr-2">
-        <i class="ri-user-line"></i>
+      <div class="w-6 h-6 flex items-center justify-center text-blue-600 mr-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A9 9 0 1118.88 6.195a9 9 0 01-13.757 11.61z" />
+        </svg>
       </div>
       <span class="text-sm font-bold">+12.458 clientes satisfeitos</span>
     </div>
   </div>
 </section>
 
+<!-- Script para carrossel -->
+<script>
+  let currentPosition = 0;
+  const track = document.getElementById("testimonial-track");
+  const slideWidth = 296;
 
+  function slideTestimonials(direction) {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    currentPosition += direction * slideWidth;
+    if (currentPosition < 0) currentPosition = 0;
+    if (currentPosition > maxScroll) currentPosition = maxScroll;
+    track.style.transform = `translateX(-${currentPosition}px)`;
+  }
+</script>
 <!-- Problemas e Soluções -->
 <section class="px-4 py-6 bg-white">
 <h2 class="text-2xl font-bold text-center mb-6">Problemas que o HHO Resolve</h2>
