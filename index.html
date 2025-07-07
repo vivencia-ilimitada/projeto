@@ -810,26 +810,61 @@ GARANTIR MEU KIT HHO AGORA
 </nav>
 <!-- Popup de Desconto -->
 <div id="discount-popup" class="fixed inset-0 flex items-center justify-center z-50 bg-black/70 hidden">
-<div class="bg-white rounded-lg p-5 w-11/12 max-w-sm relative">
-<button id="close-popup" class="absolute top-2 right-2 text-gray-500 cursor-pointer">
-<i class="ri-close-line ri-lg"></i>
-</button>
-<div class="text-center">
-<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-secondary">
-<i class="ri-coupon-3-fill ri-3x"></i>
+  <div class="bg-white rounded-lg p-5 w-11/12 max-w-sm relative">
+    <button id="close-popup" class="absolute top-2 right-2 text-gray-500 cursor-pointer">
+      <i class="ri-close-line ri-lg"></i>
+    </button>
+    <div class="text-center">
+      <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center text-secondary">
+        <i class="ri-coupon-3-fill ri-3x"></i>
+      </div>
+      <h3 class="text-xl font-bold mb-2">CUPOM EXCLUSIVO!</h3>
+      <p class="text-sm text-gray-600 mb-4">
+        Parabéns! Você ganhou 10% de desconto adicional na sua primeira compra!
+      </p>
+      <div class="bg-gray-100 p-3 rounded-lg mb-4">
+        <p class="font-bold text-lg text-primary">PRIMEIRA10</p>
+      </div>
+      <p class="text-xs text-gray-500 mb-4">Copie o código acima e utilize no checkout</p>
+      <button id="apply-discount" class="w-full bg-secondary text-white font-bold py-3 !rounded-button cursor-pointer">
+        APROVEITAR AGORA
+      </button>
+    </div>
+  </div>
 </div>
-<h3 class="text-xl font-bold mb-2">CUPOM EXCLUSIVO!</h3>
-<p class="text-sm text-gray-600 mb-4">Parabéns! Você ganhou 10% de desconto adicional na sua primeira compra!</p>
-<div class="bg-gray-100 p-3 rounded-lg mb-4">
-<p class="font-bold text-lg text-primary">PRIMEIRA10</p>
-</div>
-<p class="text-xs text-gray-500 mb-4">Copie o código acima e utilize no checkout</p>
-<button id="apply-discount" class="w-full bg-secondary text-white font-bold py-3 !rounded-button cursor-pointer">
-APROVEITAR AGORA
-</button>
-</div>
-</div>
-</div>
+<!-- Script para exibir e fechar o popup -->
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    // Mostrar popup após 5 segundos
+    setTimeout(function () {
+      const popup = document.getElementById('discount-popup');
+      if (popup) {
+        popup.classList.remove('hidden');
+      }
+    }, 5000); // ajuste o tempo conforme necessário (5000 = 5 segundos)
+
+    // Fechar popup ao clicar no botão X
+    const closeBtn = document.getElementById('close-popup');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        const popup = document.getElementById('discount-popup');
+        if (popup) {
+          popup.classList.add('hidden');
+        }
+      });
+    }
+
+    // Opcional: fechar ao clicar fora da caixinha branca
+    const popupBg = document.getElementById('discount-popup');
+    if (popupBg) {
+      popupBg.addEventListener('click', function (e) {
+        if (e.target.id === 'discount-popup') {
+          popupBg.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js">
 </script>
