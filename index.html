@@ -953,33 +953,32 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 5000);
 });
 </script>
+</script>
 <script id="popup-script">
-document.addEventListener("DOMContentLoaded", function () {
-  const discountPopup = document.getElementById("discount-popup");
-  const closePopup = document.getElementById("close-popup");
-  const applyDiscount = document.getElementById("apply-discount");
-  // Mostrar popup após 5 segundos
-  setTimeout(function () {
-    discountPopup.classList.remove("hidden");
-  }, 5000);
-  // Fechar popup
-  c10:13 07/07/2025losePopup.addEventListener("click", function () {
-    discountPopup.classList.add("hidden");
-  });
-  // Aplicar desconto
-  applyDiscount.addEventListener("click", function () {
-    discountPopup.classList.add("hidden");
-    // Mostrar mensagem de sucesso
-    const successMessage = document.createElement("div");
-    successMessage.className =
-      "fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm";
-    successMessage.textContent = "Cupom aplicado com sucesso!";
-    document.body.appendChild(successMessage);
-    // Remover mensagem após 3 segundos
-    setTimeout(function () {
-      successMessage.remove();
-    }, 3000);
-  });
+document.addEventListener('DOMContentLoaded', function() {
+const discountPopup = document.getElementById('discount-popup');
+const closePopup = document.getElementById('close-popup');
+const applyDiscount = document.getElementById('apply-discount');
+// Mostrar popup após 5 segundos
+setTimeout(function() {
+discountPopup.classList.remove('hidden');
+}, 5000);
+// Fechar popup
+closePopup.addEventListener('click', function() {
+discountPopup.classList.add('hidden');
+});
+// Aplicar desconto
+applyDiscount.addEventListener('click', function() {
+discountPopup.classList.add('hidden');
+// Mostrar mensagem de sucesso
+const successMessage = document.createElement('div');
+successMessage.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+successMessage.textContent = 'Cupom aplicado com sucesso!';
+document.body.appendChild(successMessage);
+// Remover mensagem após 3 segundos
+setTimeout(function() {
+successMessage.remove();
+}, 3000);
 });
 </script>
 <script id="cta-script">
