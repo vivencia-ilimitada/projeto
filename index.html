@@ -214,42 +214,9 @@ class="w-full rounded-lg mb-4">
   <h2 class="text-2xl font-bold text-center mb-6">O Que Dizem Nossos Clientes</h2>
 
   <div class="relative w-full overflow-hidden">
-    <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out w-max space-x-4">
+    <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out w-full overflow-x-auto scroll-smooth space-x-4">
       <!-- Slides 1 a 13 -->
-      <script>
-        const feedbacks = [
-          { nome: "Marcos L.", img: 12, nota: "★★★★★", texto: "Economizei mais de 30% no primeiro mês! Instalação simples e o sistema realmente funciona." },
-          { nome: "João V.", img: 15, nota: "★★★★★", texto: "Não acreditei no começo, mas agora meu carro gasta muito menos. Valeu cada centavo!" },
-          { nome: "Eduardo B.", img: 20, nota: "★★★★☆", texto: "Achei interessante e arrisquei. Instalei em casa e o resultado foi surpreendente." },
-          { nome: "Sérgio M.", img: 29, nota: "★★★★★", texto: "Fiz o pagamento desconfiado, mas recebi tudo certinho. Recomendo demais!" },
-          { nome: "Carlos D.", img: 33, nota: "★★★★★", texto: "Recebi o guia no mesmo dia, instalei e estou rodando tranquilo. Economia real!" },
-          { nome: "André P.", img: 36, nota: "★★★★★", texto: "Nunca imaginei que água pudesse ajudar no consumo! Estou muito satisfeito." },
-          { nome: "Luciano M.", img: 39, nota: "★★★★☆", texto: "Sou mecânico e instalei em 3 carros de clientes. Todos aprovaram!" },
-          { nome: "Fábio T.", img: 40, nota: "★★★★★", texto: "Uso diariamente pra trabalhar. Já senti diferença no bolso." },
-          { nome: "Roberto C.", img: 42, nota: "★★★★★", texto: "Simples, funcional e acessível. Recomendo a todos que querem economizar." },
-          { nome: "Daniel A.", img: 44, nota: "★★★★☆", texto: "Achei que fosse golpe, mas instalei e tô economizando de verdade." },
-          { nome: "Leandro G.", img: 46, nota: "★★★★★", texto: "Manual bem explicado. Instalei sozinho em uma tarde." },
-          { nome: "Vinícius S.", img: 47, nota: "★★★★★", texto: "Minha esposa achou loucura, agora quer instalar no carro dela." },
-          { nome: "Fernando R.", img: 48, nota: "★★★★★", texto: "Tecnologia simples e funcional. Vale cada centavo." }
-        ];
-
-        document.write(
-          feedbacks.map(f => `
-            <div class='min-w-[280px] bg-white p-4 rounded-xl shadow-md'>
-              <div class='flex items-center mb-2'>
-                <div class='w-12 h-12 rounded-full overflow-hidden mr-3'>
-                  <img src='https://i.pravatar.cc/48?img=${f.img}' alt='${f.nome}' class='w-full h-full object-cover'>
-                </div>
-                <div>
-                  <p class='font-semibold text-gray-800'>${f.nome}</p>
-                  <p class='text-sm text-yellow-500'>${f.nota}</p>
-                </div>
-              </div>
-              <p class='text-gray-700 text-sm'>“${f.texto}”</p>
-            </div>
-          `).join("")
-        );
-      </script>
+      <!-- Os cards são inseridos aqui via JS -->
     </div>
 
     <!-- Botões de navegação -->
@@ -280,19 +247,54 @@ class="w-full rounded-lg mb-4">
   </div>
 </section>
 
-<!-- Script para carrossel -->
+<!-- Script para carrossel e renderização dos slides -->
 <script>
   let currentPosition = 0;
-  const track = document.getElementById("testimonial-track");
   const slideWidth = 296;
+  const track = document.getElementById("testimonial-track");
+
+  const feedbacks = [
+    { nome: "Marcos L.", img: 12, nota: "★★★★★", texto: "Economizei mais de 30% no primeiro mês! Instalação simples e o sistema realmente funciona." },
+    { nome: "João V.", img: 15, nota: "★★★★★", texto: "Não acreditei no começo, mas agora meu carro gasta muito menos. Valeu cada centavo!" },
+    { nome: "Eduardo B.", img: 20, nota: "★★★★☆", texto: "Achei interessante e arrisquei. Instalei em casa e o resultado foi surpreendente." },
+    { nome: "Sérgio M.", img: 29, nota: "★★★★★", texto: "Fiz o pagamento desconfiado, mas recebi tudo certinho. Recomendo demais!" },
+    { nome: "Carlos D.", img: 33, nota: "★★★★★", texto: "Recebi o guia no mesmo dia, instalei e estou rodando tranquilo. Economia real!" },
+    { nome: "André P.", img: 36, nota: "★★★★★", texto: "Nunca imaginei que água pudesse ajudar no consumo! Estou muito satisfeito." },
+    { nome: "Luciano M.", img: 39, nota: "★★★★☆", texto: "Sou mecânico e instalei em 3 carros de clientes. Todos aprovaram!" },
+    { nome: "Fábio T.", img: 40, nota: "★★★★★", texto: "Uso diariamente pra trabalhar. Já senti diferença no bolso." },
+    { nome: "Roberto C.", img: 42, nota: "★★★★★", texto: "Simples, funcional e acessível. Recomendo a todos que querem economizar." },
+    { nome: "Daniel A.", img: 44, nota: "★★★★☆", texto: "Achei que fosse golpe, mas instalei e tô economizando de verdade." },
+    { nome: "Leandro G.", img: 46, nota: "★★★★★", texto: "Manual bem explicado. Instalei sozinho em uma tarde." },
+    { nome: "Vinícius S.", img: 47, nota: "★★★★★", texto: "Minha esposa achou loucura, agora quer instalar no carro dela." },
+    { nome: "Fernando R.", img: 48, nota: "★★★★★", texto: "Tecnologia simples e funcional. Vale cada centavo." }
+  ];
+
+  function renderSlides() {
+    track.innerHTML = feedbacks.map(f => `
+      <div class='min-w-[280px] bg-white p-4 rounded-xl shadow-md'>
+        <div class='flex items-center mb-2'>
+          <div class='w-12 h-12 rounded-full overflow-hidden mr-3'>
+            <img src='https://i.pravatar.cc/48?img=${f.img}' alt='${f.nome}' class='w-full h-full object-cover'>
+          </div>
+          <div>
+            <p class='font-semibold text-gray-800'>${f.nome}</p>
+            <p class='text-sm text-yellow-500'>${f.nota}</p>
+          </div>
+        </div>
+        <p class='text-gray-700 text-sm'>“${f.texto}”</p>
+      </div>
+    `).join("");
+  }
 
   function slideTestimonials(direction) {
-    const maxScroll = track.scrollWidth - track.clientWidth;
     currentPosition += direction * slideWidth;
     if (currentPosition < 0) currentPosition = 0;
+    const maxScroll = track.scrollWidth - track.clientWidth;
     if (currentPosition > maxScroll) currentPosition = maxScroll;
-    track.style.transform = `translateX(-${currentPosition}px)`;
+    track.scrollTo({ left: currentPosition, behavior: 'smooth' });
   }
+
+  renderSlides();
 </script>
 <!-- Problemas e Soluções -->
 <section class="px-4 py-6 bg-white">
